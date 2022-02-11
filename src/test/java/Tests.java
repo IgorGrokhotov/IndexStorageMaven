@@ -25,4 +25,17 @@ public class Tests {
     public void GetTest() {
         Assertions.assertTrue(mainArr[3] == verifArr.get(3));
     }
+
+    @Test
+    public void SetTest() {
+        ArrayIndexStorage arr = new ArrayIndexStorage(new int[0]);
+        arr.setArr(reverceArr);
+        Assertions.assertArrayEquals(reverceArr, arr.getArr());
+    }
+
+    @Test
+    public void SuperGetTest() {
+        IndexStorage arr = new IndexStorage(3);
+        Assertions.assertEquals(0, arr.get(0));
+    }
 }
